@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #78d1dd;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        .info {
+            color: #555;
+        }
+        #mainlink {
+            text-decoration: none;
+            color: blue;
+        }
+        #mainlink:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Original Title</h1>
+    <img src="pexels-thisisengineering-3862132.jpg" alt="" width="550" height="350" id="image">
+    <p class="info">This is a paragraph</p>
+    <a id="mainlink" href="#">PLP Website</a>
+
+    <script>
+        const mainTitle = document.querySelector('h1');
+        const image = document.querySelector('img');
+        const paragraph = document.querySelector('.info');
+        const link = document.querySelector('#mainlink');
+        
+        //1. Changing content 
+        mainTitle.textContent = 'This is a modified title';
+        paragraph[0].innerHTML = 'This is a paragraph';
+
+        // 2.Changing attributes 
+
+        image.setAttribute('src', 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600');
+        image.setAttribute('alt', 'This is an image');
+        image.setAttribute('width', '600');
+        image.setAttribute('height', '400');
+
+        // 3. Changing styles
+        mainTitle.style.color = 'blue';
+        mainTitle.style.fontSize = '2em';
+
+        <!-- 4. Modify classes -->
+        mainTitle.classList.add('new-class');
+        mainTitle.classList.remove('new-class');
+        mainTitle.classList.toggle('new-class'); // Toggles the class on and off
+        mainTitle.classList.contains('new-class'); // Checks if the class is present
+        
+    </script>
+</body>
+</html>

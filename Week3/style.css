@@ -1,0 +1,35 @@
+h1{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+}
+p{
+    color: blue;
+    font-size: 20px;
+    text-align: center;
+}
+#socials{
+    color: green;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+footer{
+    color: green;
+    font-size: 20px;
+    text-align: center;
+    background-color: yellow;
+}
+body{
+    background-image: url('../Week2/images/pexels-digital-phase-2150191459-31008030.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+img{
+    width: 300px;
+    height: 400px;
+    border: 3px solid hotpink;
+    padding: 40px;
+    margin: 20px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv" style="width: 200px; height: 200px; background-color: lightblue; display: flex; align-items: center; justify-content: center;">
+        <button>Click Me</button>
+    </div>
+
+    <script>
+        const myDiv = document.getElementById('myDiv');
+
+        myDiv.addEventListener('click', function() {
+            alert('Div clicked!');
+        });
+
+        const button = myDiv.querySelector('button');
+        button.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevents the click event from bubbling up to the div
+            alert('Button clicked!');
+        });
+    </script>
+</body>
+</html>

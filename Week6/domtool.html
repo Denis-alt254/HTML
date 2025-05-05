@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Create and Remove example</title>
+    <style>
+        body {
+            background-color: #82ecec;
+            font-family: Arial, sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>My shopping List</h1>
+    <div class="listcontainer"></div>
+
+    <script>
+        //create an element
+        const listCont = document.getElementById('listcontainer')
+
+
+        //create a paragraph
+        const paragraph = document.getElementsByClassName('info')
+
+        paragraph[0].innerHTML = 'This is a pargraph'
+        
+    </script>
+</body>
+</html>

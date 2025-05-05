@@ -1,0 +1,204 @@
+body{
+    background-color: rgb(250, 250, 250);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    color: #9645F8;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+button{
+    background-color: #9645F8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    transform: scale(1.05);
+    background-color: #7a98ec;
+}
+button:active{
+    background-color: #ca7bfe;
+}
+button:focus{
+    outline: none;
+}
+button:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 10px;
+    transition: o.3s all ease;
+}
+.container{
+    width: 80%;
+    margin: 30px auto;
+    height: 500px;
+    background-color: aquamarine;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+
+}
+
+.image{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;    
+    overflow: hidden;
+    animation: image 2s infinite alternate;
+}
+
+@keyframes image {
+    0%{
+        box-shadow: #7a98ec;
+    }
+    100%{
+        box-shadow: #9645F8;
+    }
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: glow-border 2s infinite alternate;
+}
+
+@keyframes glow-border {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.flex_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    background-color: rgb(250, 250, 250);
+}
+.flex_item{
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background: linear-gradient(to right, #7a98ec, #ca7bfe);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.flex_item:hover{
+    transform: scale(1.1);
+    background-color: rgb(16, 174, 226);
+}
+
+.grid_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 40px 40px 30px;
+    gap: 10px;
+    padding: 10px;
+    height: 100vh;
+    grid-template-areas: "Grid Item 1" "Grid Item 2" "Grid Item 3" "Grid Item 4";
+    background-color: rgb(221, 223, 230);
+}
+@media (min-width: 600px) {
+    .grid_container{
+        grid-template-columns: 160px auto auto 160px;
+        grid-template-rows: 30px auto 60px 30px;
+        gap: 10px;
+        grid-template-areas: 
+            'Grid Item 1 Grid Item 1 Grid Item 1 Grid Item 1'
+            "Grid Item 2 Grid Item 2 Grid Item 3 Grid Item 3"
+            "Grid Item 2 Grid Item 2 Grid Item 3 Grid Item 3"
+            "Grid Item 4 Grid Item 4 Grid Item 4 Grid Item 4";
+    }
+}
+.grid_item1{
+    background-color: rgb(16, 174, 226);
+    grid-area: Grid Item 1;
+}
+.grid_item2{
+    background-color: rgb(16, 226, 110);
+    grid-area: Grid Item 2;
+}
+.grid_item3{
+    background-color: rgb(20, 16, 226);
+    grid-area: Grid Item 3;
+}
+.grid_item4{
+    background-color: rgb(197, 83, 6);
+    grid-area: Grid Item 4;
+}
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;}
+
+article{
+    background: linear-gradient(to right, #7a98ec, #ca7bfe);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 300px;
+}
+
+article:hover{
+    transform: scale(1.1);
+    background-color: rgb(16, 226, 69);
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: rgb(244, 247, 248);
+    }
+    .container{
+        width: 100%;
+        background-color: rgb(162, 81, 238);
+    }
+    button{
+        width: 100%;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+}

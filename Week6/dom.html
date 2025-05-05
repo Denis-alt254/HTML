@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="mainTitle"></h1>
+
+    <p class="info">This is a paragraph</p>
+    <p class="info">this is another paragraph</p>
+
+    <script>
+        // Select the first <h1> element and change its text content
+        const mainTitle = document.querySelector('h1');
+        mainTitle.textContent = 'Hello World!';
+
+        // Select all elements with the class "info" and change their text color to blue
+        const infoElements = document.querySelectorAll('.info');
+        infoElements.forEach(element => {
+            element.style.color = 'blue';
+        });
+    </script>
+</body>
+</html>
